@@ -56,7 +56,40 @@ while userChoice != "DONE":
 
 
 
+divider ="----------------------------------"
+print(divider)
+print("WHOLE FOODS MARKET")
+print("www.wholefoodsmarket.com")
+print(divider)
 
+from datetime import datetime
+from datetime import date
+today = date.today()
+now = datetime.now()
+print("CHECKOUT AT: ", now.strftime("%Y/%m/%d %H:%M:%S"))
+
+print(divider)
+
+print("SELECTED PRODUCTS: ")
+for userChoice in shopping_cart:
+    matching_products = [product for product in products if str(product["id"]) == str(userChoice)]
+    matching_product = matching_products[0]
+    print(" +" + matching_product["name"] + " ($" + str("{0:.2f}".format(matching_product["price"])) + ")")
+    subtotal = subtotal + float(matching_product["price"])
+    total_tax = total_tax + (float(matching_product["price"]) * .0875)
+    total_price = total_price + (float(matching_product["price"]) * 1.0875)
+    pass
+
+
+
+
+print(divider)
+print("SUBTOTAL: " + " $" + str("{0:.2f}".format(subtotal)))
+print("TAX: " + " $" + str("{0:.2f}".format(total_tax)))
+print("TOTAL: " + " $" + str("{0:.2f}".format(total_price)))
+print(divider)
+print("THANKS, SEE YOU AGAIN SOON!")
+print(divider)
 
    
 
