@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#JSON FILE
+{
+  "type": "service_account",
+  "project_id": "fine-doodad-267122",
+  "private_key_id": "2a5bddf63399a52cc6111edcd62708fa81d898d3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDYDTVz9v5fVnLk\nsCVjbEyxxHSAy1sYTop5Wx13N9zs5r9t9hbkvOH+eI+ewaNYjkrtjsJ76YOnPl2T\nBuu+I03OxEiQAcjNzjCUwzLKMxHXfRqTVc7aTaVqz44PoMR/blDPxnSJDT04rfXe\nOj1GPbBaJAu+gJPDUTqVfrTb4pYUiTJVnQhIh3I6NU18M/dG9vVycFjiegvSQ+08\n0Mkb15qeI4G6r6SkFBHyMstORr/+cextkvLErMJ89Bzf0dLX1k4anMWp0UFtsYGD\nJdUn7kGyyayhrzPm16a+qPS29r95qDgBSMffKWQwxCbsV8YMs5IEZtyBDLYcOpgi\nCKH34pnBAgMBAAECggEAAILtfkVdtyzkvcnm2MGLLif+QkaR2WKFGckqIBvRDO2D\nr4yzuOTXBAEAjrMts9a2nU4SA7vMwDvLiGl73YuqdcrCb4wq3f6FGRZjGAfw+S0y\n1QufCd9sIEtobjXfohhegeGhBgxdVfx8GjVgJAkCZ45xrTqFFFwI8w0I/BFEqbzV\nSfInl2duKNSbZytqe9krGvqYSFGT22WZcsR26lqeTIunj+YqVxDOZkIAUKuHRDLd\nY4+tUDQ32ubmPa72ayjxNDUapxZZPTnxJuWrt33eb8yAedgBwBgANIPoYhCWWj05\n9kZBQpbCCq2HOtmBg5xDsBqhKxK+aSI0yk+59DyecQKBgQD8XnCWaRVqBWh9c86p\n97ZvJ76Bknf+6ILu1+HSMBdzu/WZ1VRis3TDV1eNSqAF51GJcusPNRoWQS++Nz3W\nj1TkszrxTEWALdPAlBpX+txe6LooQGsRQVfg/pXUZ2UvjraEfaUApejF6kWKiPjK\niJRgp1z9RbY2sJDPBsZSyLD3uQKBgQDbKQADTwXX7AeC5BIVdNzEkg2uBL7K53E3\nuhrlQJXGcmnd0KEhkH1agi03UIDVN8ZygJ7WPDwsJlqSOd3YDZr7+RgUUCjN0pzR\n7gIWdlBL8BG445BAu6Lww8jaxoTRhZsO3bfjt4ys9Rwq6e0eb3K4S7FHLS6N7Iwp\ns6+DdBqmSQKBgQCAY5dJnepMBrZS5GCmLaR9Ri3wA1DSuP0rf16eLOMxeNUIzvPg\nRsXHPx8GfYmNl1Hu6CzXjr9XxRAB6F6oUkDxHJGHArN081t/5JjGW5RTIHjcU3Fk\n1OZdS4d0CKn8mNEX9EfGXaFfVsDMKsTPXM6HoX14SEfb6NWyzRKGOR122QKBgQCe\n0CgtPZ9rZ6PNyv37xHKSk5AMMW4c1PhrPJZu2I1wf8qNrbiF/RGJe9nOQq0JVWCd\n6uyvLHkiOSza18oV3U4ZF9nGJoxbEisHyWSD6HqpfK8q/uSytAYQWJ/9QWxP9HR3\nol22S3VKhFhEFL36lyJXwKoXfPtGZ0rukUI3jPQe2QKBgGuxjzSz4UNWBTxixvU5\nkakUlVuZAps1r3+Cu24TuKSTkZngvWgshxNXn/gXbQMyKaBcVRA0XAxNH0yZoeMj\nahnNkSsYksNjgfjohDixUu4qDy09z6x4a3gwUaRAYLiu/Qo3i3WxwOG1ECYVxdLz\nX92kHQ3Oqw6qy3k7tbjNfQD4\n-----END PRIVATE KEY-----\n",
+  "client_email": "shopping-service@fine-doodad-267122.iam.gserviceaccount.com",
+  "client_id": "117248411533172778210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shopping-service%40fine-doodad-267122.iam.gserviceaccount.com"
+}

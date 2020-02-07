@@ -2,6 +2,8 @@
 
 #from pprint import pprint
 
+
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -77,7 +79,7 @@ print("SELECTED PRODUCTS: ")
 for userChoice in shopping_cart:
     matching_products = [product for product in products if str(product["id"]) == str(userChoice)]
     matching_product = matching_products[0]
-    print(" +" + matching_product["name"] + " ($" + str("{0:.2f}".format(matching_product["price"])) + ")")
+    print(" + " + matching_product["name"] + " ($" + str("{0:.2f}".format(matching_product["price"])) + ")")
     subtotal = subtotal + float(matching_product["price"])
     total_tax = total_tax + (float(matching_product["price"]) * .0875)
     total_price = total_price + (float(matching_product["price"]) * 1.0875)
