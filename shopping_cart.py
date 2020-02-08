@@ -46,9 +46,9 @@ while userChoice != "DONE":
     
     if userChoice == "DONE" or userChoice == "done":
         break
-    elif int(userChoice) > len(products):
-        print("That item is unknown")
-        break
+    elif int(userChoice) > len(products) or int(userChoice) <= 0:
+        print("That item is unknown. Please try again.")
+        
     else:
         shopping_cart.append(userChoice)
         pass
