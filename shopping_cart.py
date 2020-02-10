@@ -47,6 +47,11 @@ subtotal = 0.00
 iterator = 0
 matching_product = 0
 matching_products =[]
+all_ids = []
+
+for product in products:
+    id_val =  str(product["id"])
+    all_ids.append(id_val)
 
 while userChoice != "DONE":
     
@@ -54,11 +59,10 @@ while userChoice != "DONE":
     
     if userChoice == "DONE" or userChoice == "done":
         break
-    elif int(userChoice) > len(products) or int(userChoice) <= 0:
-        print("That item is unknown. Please try again.")
-        
-    else:
+    elif userChoice in all_ids:
         shopping_cart.append(userChoice)
+    else:
+        print("That item is not in the list")
         pass
     
 
