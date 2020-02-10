@@ -1,6 +1,14 @@
 # shopping_cart.py
 
 #from pprint import pprint
+from datetime import datetime
+from datetime import date
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+tax= os.environ.get("TAX")
+
 
 
 
@@ -67,8 +75,7 @@ print("WHOLE FOODS MARKET")
 print("www.wholefoodsmarket.com")
 print(divider)
 
-from datetime import datetime
-from datetime import date
+
 today = date.today()
 now = datetime.now()
 print("CHECKOUT AT: ", now.strftime("%Y/%m/%d %H:%M:%S"))
@@ -81,8 +88,8 @@ for userChoice in shopping_cart:
     matching_product = matching_products[0]
     print(" + " + matching_product["name"] + " ($" + str("{0:.2f}".format(matching_product["price"])) + ")")
     subtotal = subtotal + float(matching_product["price"])
-    total_tax = total_tax + (float(matching_product["price"]) * .0875)
-    total_price = total_price + (float(matching_product["price"]) * 1.0875)
+    total_tax = total_tax + (float(matching_product["price"]) * float(tax))
+    total_price = total_price + (float(matching_product["price"]) * (1 + float(tax)))
     pass
 
 
