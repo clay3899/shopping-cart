@@ -7,22 +7,19 @@
 >   + [The `datetime` Module](/notes/python/modules/datetime.md)
 >   + [Raising and Handling Errors](/notes/python/errors.md)
 
-## Learning Objectives
-
-
-
 
 ## Instructions
 
+Please fork the repository. After forking the repository clone the repository with the instructions below.
 
 
 ## Setup
 
 ### Repo Setup
 
-Use the GitHub.com online interface to create a new remote project repository called something like "shopping-cart". When prompted by the GitHub.com online interface, let's get in the habit of adding a "README.md" file and a Python-flavored ".gitignore" file (and also optionally a "LICENSE") during the repo creation process. After this process is complete, you should be able to view the repo on GitHub.com at an address like `https://github.com/YOUR_USERNAME/shopping-cart`.
+Use the GitHub.com online interface to clone a remote project repository called something like "shopping-cart". After this process is complete, you should be able to view the repo on GitHub.com at an address like `https://github.com/YOUR_USERNAME/shopping-cart`.
 
-After creating the remote repo, use GitHub Desktop software or the command-line to download or "clone" it onto your computer. Choose a familiar download location like the Desktop.
+Use GitHub Desktop software or the command-line to download or "clone" it onto your computer. Choose a familiar download location like the Desktop.
 
 
 ### Directory Set up
@@ -43,6 +40,14 @@ conda activate shopping-env
 ```
 
 ## Usage
+
+### Installation
+    
+    Within this environment, before running the program and adjusting tax, you should install the dotenv package with
+
+    ```sh
+    pip install python-dotenv #note: Not just "dotenv
+    ```
 
 ### Run the checkout process
 
