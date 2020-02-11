@@ -45,9 +45,9 @@ conda activate shopping-env
     
 Within this environment, before running the program and adjusting tax, you should install the dotenv package with
 
-    
-    pip install python-dotenv #note: Not just "dotenv
-    
+```sh   
+pip install python-dotenv #note: Not just "dotenv
+```  
 
 ### Run the checkout process
 
