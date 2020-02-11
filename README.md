@@ -38,7 +38,7 @@ After setting directory to ~/Desktop/shopping-cart, we need to create an shoppin
 conda create -n shopping-env python=3.7 #first time only
 
 
-conda ctivate shopping-env
+conda activate shopping-env
 
 ```
 
