@@ -3,18 +3,13 @@
 #from pprint import pprint
 from datetime import datetime
 from datetime import date
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-tax= os.environ.get("TAX")
 
 userChoice = "0"
 shopping_cart = []
-total_price = 0.00
+
 total_tax = 0.00
-subtotal = 0.00
+
 iterator = 0
 matching_product = 0
 matching_products =[]
@@ -27,16 +22,22 @@ def human_friendly_timestamp():
     now = datetime.now()
     return now.strftime("%m/%d/%Y %I:%M:%S%p")
 
-def find_product(choice):
+def find_product(item_list):
     
+    for item in shopping_cart:
+        print("PRODUCT: " + item["name"] + " " + str(to_usd(item["price"])))
+        pass
     
+def calculate_total_price(item_list):
+    tax = .0875
+    subtotal = 0.00
+    for item in item_list:
+        subtotal = subtotal + item["price"]
+        pass
+    print(f"SUBTOTAL: {str(to_usd(subtotal))}")
+    print(f"TAX: {str(to_usd(subtotal * tax))}")
+    print(f"TOTAL: {str(to_usd(subtotal + (subtotal * tax)))}")
     
-    return
-    
-def calculate_total_price():
-    
-    
-    return "total price"
 
 
 products = [
@@ -79,7 +80,9 @@ while userChoice != "DONE":
     if userChoice == "DONE" or userChoice == "done":
         break
     elif userChoice in all_ids:
-        shopping_cart.append(userChoice)
+        matching_products = [product for product in products if str(product["id"]) == str(userChoice)]
+        matching_product = matching_products[0]
+        shopping_cart.append(matching_product)
     else:
         print("That item is not in the list")
         pass
@@ -104,20 +107,14 @@ print("CHECKOUT AT: ", human_friendly_timestamp())
 print(divider)
 
 print("SELECTED PRODUCTS: ")
-for userChoice in shopping_cart:
-    matching_products = [product for product in products if str(product["id"]) == str(choice)]
-    matching_product = matching_products[0]
-    print(" + " + matching_product["name"] + " ("+ to_usd(matching_product["price"]) + ")")
-    subtotal = subtotal + float(matching_product["price"])
-    pass
+   
+find_product(shopping_cart)
 
 
 
 
 print(divider)
-print(f"SUBTOTAL: {to_usd(subtotal)}")
-print(f"TAX: {to_usd(subtotal * tax)}")
-print(f"TOTAL: {to_usd(subtotal + (subtotal * tax))}")
+calculate_total_price(shopping_cart)
 print(divider)
 print("THANKS, SEE YOU AGAIN SOON!")
 print(divider)
