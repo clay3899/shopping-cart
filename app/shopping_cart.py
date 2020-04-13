@@ -7,9 +7,36 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+
 tax= os.environ.get("TAX")
 
+userChoice = "0"
+shopping_cart = []
+total_price = 0.00
+total_tax = 0.00
+subtotal = 0.00
+iterator = 0
+matching_product = 0
+matching_products =[]
+all_ids = []
 
+def to_usd(my_price):
+  return f"${my_price:,.2f}"
+
+def human_friendly_timestamp():
+    now = datetime.now()
+    return now.strftime("%m/%d/%Y %I:%M:%S%p")
+
+def find_product(choice):
+    
+    
+    
+    return
+    
+def calculate_total_price():
+    
+    
+    return "total price"
 
 
 products = [
@@ -39,15 +66,7 @@ products = [
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
-userChoice = "0"
-shopping_cart = []
-total_price = 0.00
-total_tax = 0.00
-subtotal = 0.00
-iterator = 0
-matching_product = 0
-matching_products =[]
-all_ids = []
+
 
 for product in products:
     id_val =  str(product["id"])
@@ -70,39 +89,35 @@ while userChoice != "DONE":
 
     pass
 
-
-
-
 divider ="----------------------------------"
+
+
 print(divider)
 print("WHOLE FOODS MARKET")
 print("www.wholefoodsmarket.com")
 print(divider)
 
 
-today = date.today()
-now = datetime.now()
-print("CHECKOUT AT: ", now.strftime("%Y/%m/%d %H:%M:%S"))
+
+print("CHECKOUT AT: ", human_friendly_timestamp())
 
 print(divider)
 
 print("SELECTED PRODUCTS: ")
 for userChoice in shopping_cart:
-    matching_products = [product for product in products if str(product["id"]) == str(userChoice)]
+    matching_products = [product for product in products if str(product["id"]) == str(choice)]
     matching_product = matching_products[0]
-    print(" + " + matching_product["name"] + " ($" + str("{0:.2f}".format(matching_product["price"])) + ")")
+    print(" + " + matching_product["name"] + " ("+ to_usd(matching_product["price"]) + ")")
     subtotal = subtotal + float(matching_product["price"])
-    total_tax = total_tax + (float(matching_product["price"]) * float(tax))
-    total_price = total_price + (float(matching_product["price"]) * (1 + float(tax)))
     pass
 
 
 
 
 print(divider)
-print("SUBTOTAL: " + " $" + str("{0:.2f}".format(subtotal)))
-print("TAX: " + " $" + str("{0:.2f}".format(total_tax)))
-print("TOTAL: " + " $" + str("{0:.2f}".format(total_price)))
+print(f"SUBTOTAL: {to_usd(subtotal)}")
+print(f"TAX: {to_usd(subtotal * tax)}")
+print(f"TOTAL: {to_usd(subtotal + (subtotal * tax))}")
 print(divider)
 print("THANKS, SEE YOU AGAIN SOON!")
 print(divider)
