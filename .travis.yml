@@ -5,4 +5,4 @@ python:
 insall:
   - pip install pytest
 script:
-  -pytest
+  - pytest
