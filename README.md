@@ -57,8 +57,8 @@ python shopping_cart.py
 
 
 
-### Local tax data
+### Quality Check
 
-You may wish to put local tax data into the file.
+Use this link to check the quality of code
 
-Go to the .env file and adjust the tax rate as you desire
+https://codeclimate.com/github/clay3899/shopping-cart
