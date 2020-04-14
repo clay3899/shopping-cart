@@ -52,7 +52,7 @@ pip install python-dotenv #note: Not just "dotenv
 ### Run the checkout process
 
 ```sh
-python shopping_cart.py
+python app/shopping_cart.py
 ```
 
 
@@ -62,3 +62,10 @@ python shopping_cart.py
 Use this link to check the quality of code
 
 https://codeclimate.com/github/clay3899/shopping-cart
+
+
+### Run the Test
+
+```sh
+pytest
+```
