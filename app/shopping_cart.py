@@ -22,11 +22,11 @@ def to_usd(my_price):
  
     return f"${my_price:,.2f}"
 
-def human_friendly_timestamp():
+def human_friendly_timestamp(now):
     """Creates a human friendly timestamp of the 
     current time. no parameter required."""
     
-    now = datetime.now()
+    
     return now.strftime("%m/%d/%Y %I:%M:%S%p")
 
 def find_product(product_id, all_products):
@@ -97,13 +97,13 @@ if __name__ == "__main__":
         pass
 
     divider ="----------------------------------"
-
+    now = datetime.now()
 
     print(divider)
     print("WHOLE FOODS MARKET")
     print("www.wholefoodsmarket.com")
     print(divider)
-    print("CHECKOUT AT: ", human_friendly_timestamp())
+    print("CHECKOUT AT: ", human_friendly_timestamp(now))
     print(divider)
     print("SELECTED PRODUCTS: ")
     
